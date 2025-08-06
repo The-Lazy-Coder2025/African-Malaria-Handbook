@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy – The African Medical Handbook</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #e6c068;
+      --gold-light: #f9e7b5;
+      --charcoal: #232323;
+      --cream: #faf1d7;
+    }
+    html, body {
+      height: 100%; margin: 0; padding: 0;
+      background: var(--cream);
+      color: #232323;
+      font-family: 'Montserrat', 'Merriweather', serif;
+      min-height: 100vh;
+      font-size: 21px;
+      letter-spacing: 0.03em;
+      padding-bottom: 120px;
+    }
+    .privacy-container {
+      max-width: 720px;
+      background: #fff7ed;
+      margin: 72px auto 0 auto;
+      padding: 48px 42px 60px 42px;
+      border-radius: 22px;
+      box-shadow: 0 8px 44px #e6c06829, 0 2px 12px #0002;
+      border: 3px solid var(--gold);
+      opacity: 0;
+      transform: translateY(54px);
+      animation: fadeInUp .9s .25s forwards cubic-bezier(.61,0,.41,1);
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: none; }
+    }
+    h1 {
+      color: var(--gold);
+      font-size: 2.5rem;
+      margin-bottom: 28px;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 2px 18px #e6c06818;
+      font-family: 'Montserrat', serif;
+    }
+    p {
+      font-size: 1rem;
+    }
+    ol {
+      color: #322b14;
+      font-size: 1rem;           /* SMALLER body text */
+      margin: 0 0 28px 18px;
+      padding-left: 18px;
+      font-family: 'Montserrat', serif;
+    }
+    li {
+      margin-bottom: 18px;
+      line-height: 1.65;
+      font-size: 0.97em;         /* Even smaller in list */
+      font-family: 'Montserrat', serif;
+    }
+    strong {
+      color: #b6922d;
+      font-weight: 600;
+      font-family: 'Montserrat', serif;
+      font-size: 1em;
+    }
+    .contact-link {
+      color: var(--gold);
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 1em;
+    }
+    .back-btn {
+      display: block;
+      width: max-content;
+      margin: 48px auto 0 auto;
+      background: var(--charcoal);
+      color: var(--gold-light);
+      border: 2.5px solid var(--gold);
+      border-radius: 12px;
+      font-size: 1.13rem;
+      font-weight: 700;
+      padding: 14px 40px;
+      text-decoration: none;
+      transition: background .18s, color .18s, border .18s;
+      box-shadow: 0 2px 10px #e6c06824;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      font-family: 'Montserrat', serif;
+    }
+    .back-btn:hover, .back-btn:focus {
+      background: var(--gold);
+      color: var(--charcoal);
+      border-color: #c8b272;
+    }
+    @media (max-width: 700px) {
+      .privacy-container {
+        margin: 24px 3vw 0 3vw;
+        padding: 24px 7vw 20px 7vw;
+      }
+      h1 { font-size: 1.45rem; }
+      ol { font-size: 0.96rem; }
+      .back-btn { font-size: 1rem; padding: 10px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="privacy-container">
+    <h1>Privacy Policy</h1>
+    <p>
+      This Privacy Policy explains how we collect, use, and safeguard your information when you visit <strong>The African Medical Handbook</strong>.
+    </p>
+    <ol>
+      <li>
+        <strong>Information We Collect</strong><br>
+        We may collect personal information you voluntarily provide, such as your name and email address through the contact form. We do not use cookies or third-party trackers at this time.
+      </li>
+      <li>
+        <strong>How We Use Your Information</strong><br>
+        Your information is used solely to respond to messages and feedback. We do not share or sell your data.
+      </li>
+      <li>
+        <strong>Data Storage</strong><br>
+        Messages sent through the contact form may be stored temporarily in our email system for follow-up purposes. You can request deletion at any time.
+      </li>
+      <li>
+        <strong>Third Parties</strong><br>
+        We do not share your data with third parties.
+      </li>
+      <li>
+        <strong>Contact</strong><br>
+        If you have questions about this policy, please reach out through the <a href="/contact" class="contact-link">contact form</a>.
+      </li>
+    </ol>
+    <a href="/" class="back-btn" id="backHomeBtn">&larr; Back to Home</a>
+  </main>
+  <script>
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "b" && !e.target.matches('input, textarea')) {
+        document.getElementById('backHomeBtn').focus();
+      }
+    });
+  </script>
+</body>
+</html>

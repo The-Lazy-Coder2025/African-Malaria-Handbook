@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Contact Us – AMH{% endblock %}
+{% block content %}
+<h1>Contact Us</h1>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+    {% for category, msg in messages %}
+      <li class="flash-{{ category }}">{{ msg }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<form method="post" class="contact-form">
+  <label>Your Name: <input type="text" name="name" required></label><br>
+  <label>Your Email: <input type="email" name="email" required></label><br>
+  <label>Your Message:<br>
+    <textarea name="message" rows="7" required style="width:99%"></textarea>
+  </label><br>
+  <button type="submit">Send Message</button>
+</form>
+{% endblock %}

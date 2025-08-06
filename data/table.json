@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "carbamazepine-and-mefloquine",
+    "title": "Carbamazepine and Mefloquine",
+    "risk_rating": 10,
+    "table": [
+      ["Issue", "Clinical Concern"],
+      ["Pharmacokinetic Interaction", "CBZ may lower MFQ levels via CYP3A4 induction; MFQ may reduce AED levels unpredictably."],
+      ["Seizure Risk", "MFQ lowers seizure threshold via GABAergic inhibition and gap junction disruption."],
+      ["Monitoring Recommendations", "Avoid MFQ in epilepsy; if used, monitor AED levels and seizure activity closely."]
+    ]
+  },
+  {
+    "slug": "levetiracetam-and-mefloquine",
+    "title": "Levetiracetam and Mefloquine",
+    "risk_rating": 2,
+    "table": [
+      ["Factor", "Implication"],
+      ["CNS Interaction", "MFQ may lower seizure threshold; LEV does not directly exacerbate this effect."],
+      ["GABA / Gap Junctions", "MFQ interferes with GABA and connexins; LEV has a distinct, non-overlapping MOA."],
+      ["Pharmacokinetic Risk", "No significant CYP450 or P-gp interaction; LEV levels unaffected by MFQ."],
+      ["Monitoring Need", "TDM not generally needed; clinical observation for CNS effects is recommended."]
+    ]
+  },
+  {
+    "slug": "phenytoin-and-mefloquine",
+    "title": "Phenytoin and Mefloquine",
+    "risk_rating": 9,
+    "table": [
+      ["Domain", "Mechanism / Concern", "Clinical Impact"],
+      ["Pharmacokinetics", "Phenytoin induces CYP3A4 → increases mefloquine clearance", "↓ Mefloquine plasma levels → reduced malaria prophylaxis or treatment efficacy"],
+      ["Pharmacodynamics", "Mefloquine disrupts GABA signaling and gap junctions", "↓ Seizure threshold → ↑ risk of breakthrough seizures in epilepsy patients"],
+      ["Polymorphisms", "CYP2C9/CYP2C19 variants (e.g., *2/*3 alleles) impair phenytoin metabolism", "↑ Phenytoin toxicity risk in poor metabolizers, especially in Asian and mixed ancestry populations"],
+      ["Neuropsychiatric Risk", "Additive CNS toxicity: phenytoin side effects + mefloquine-induced psychosis/seizures", "↑ Risk of confusion, hallucinations, mood instability, or status epilepticus"],
+      ["Therapeutic Monitoring", "Nonlinear phenytoin kinetics + high interaction variability", "Weekly TDM of phenytoin levels essential during and after mefloquine administration"],
+      ["Preferred AED Alternative", "Levetiracetam: renal clearance, no CYP interaction", "Lower risk of interaction and neurotoxicity"],
+      ["Preferred Antimalarial", "Doxycycline or atovaquone–proguanil", "Safer options in epilepsy; no seizure threshold suppression or major CYP metabolism"],
+      ["Recommendation", "High pharmacokinetic and neuropsychiatric risk", "Avoid when possible; if necessary, use with close clinical and psychiatric monitoring"]
+    ]
+  },
+  {
+    "slug": "valproate-and-mefloquine",
+    "title": "Valproate and Mefloquine",
+    "risk_rating": 7,
+    "table": [
+      ["Domain", "Mechanism / Concern", "Clinical Impact"],
+      ["Pharmacokinetics", "Valproate is metabolized via glucuronidation; mefloquine may increase hepatic clearance (Johannessen Landmark)", "↓ Valproate levels → seizure breakthrough (case report evidence)"],
+      ["Mitochondrial Toxicity", "Both agents impair mitochondrial function (Zaccara & Franco, 2023; Webb & Archer, 2020)", "↑ Risk of encephalopathy, hyperammonemia, cognitive dysfunction"],
+      ["Pharmacodynamics", "Mefloquine disrupts GABA and electrical coupling; valproate offers partial mitigation (Singh, 2015)", "Inadequate seizure protection + ↑ psychiatric instability"],
+      ["CYP/UGT Considerations", "Valproate weakly inhibits CYP2C9/CYP2C19; not likely to affect mefloquine significantly", "Interaction likely transporter- or UGT-mediated, not CYP-based"],
+      ["TDM Relevance", "Narrow therapeutic index + nonlinear PK of valproate", "Strong recommendation for therapeutic drug monitoring"],
+      ["Preferred Alternatives", "Doxycycline or atovaquone–proguanil (Lewis et al., 2020)", "Avoid mefloquine when possible"],
+      ["Recommendation", "Shared CNS and hepatic toxicity + interaction variability", "Avoid if alternatives available; otherwise, monitor LFTs, VPA levels, and CNS function."]
+    ]
+  },
+  {
+    "slug": "lamotrigine-and-mefloquine",
+    "title": "Lamotrigine and Mefloquine",
+    "risk_rating": 6,
+    "table": [
+      ["Domain", "Mechanism / Concern", "Clinical Impact"],
+      ["Pharmacokinetics", "Lamotrigine undergoes glucuronidation; mefloquine has no effect on UGT1A4 (Karaźniewicz-Łada et al., 2021)", "No expected metabolic interaction"],
+      ["Pharmacodynamics", "Both agents associated with agitation, insomnia, emotional dysregulation (Singh, 2015; Zaccara & Franco, 2023)", "↑ Risk of psychiatric side effects, particularly in adolescents or stressed patients"],
+      ["Seizure Threshold", "Mefloquine may offset lamotrigine’s seizure stabilization via GABA disruption (Webb & Archer, 2020)", "Possible seizure breakthrough despite continued AED therapy"],
+      ["Titration Concerns", "Lamotrigine requires gradual dose increase; psychiatric destabilization risk rises during titration", "Mefloquine-induced CNS stress may interfere with lamotrigine tolerability"],
+      ["Monitoring Needs", "TDM not routinely indicated for LTG", "Clinical observation critical during initiation and travel"],
+      ["Preferred Alternatives", "Doxycycline or atovaquone–proguanil (Lewis et al., 2020)", "Preferable for patients with psychiatric history or undergoing titration"],
+      ["Recommendation", "Psychiatric and seizure risks are additive", "Acceptable with caution; avoid in high-risk CNS or mood disorder populations."]
+    ]
+  }
+]

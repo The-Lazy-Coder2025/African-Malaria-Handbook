@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Search – AMH{% endblock %}
+{% block content %}
+<h1>Search Drug–Antimalarial Interactions</h1>
+<form class="search-bar" method="get" action="{{ url_for('search') }}">
+  <input type="text" name="q" placeholder="Enter drug name or pair…" required>
+  <button type="submit">🔍 Search</button>
+</form>
+{% endblock %}

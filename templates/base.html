@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}AMH{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+</head>
+<body>
+  <header>
+    <a href="{{ url_for('home') }}">African Medical Handbook</a>
+    &nbsp;|&nbsp;
+    <a href="{{ url_for('search') }}">Search</a>
+    &nbsp;|&nbsp;
+    <a href="{{ url_for('disclaimer') }}">Disclaimer</a>
+    &nbsp;|&nbsp;
+    <a href="{{ url_for('privacy') }}">Privacy</a>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <script>
+  // Fade-out on navigation
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('a[href]:not([target="_blank"])');
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        // Only for internal links (not anchor tags or mailto)
+        if (
+          link.hostname === window.location.hostname &&
+          !link.href.includes('#') &&
+          !link.href.startsWith('mailto:') &&
+          !link.href.startsWith('javascript:')
+        ) {
+          document.body.style.transition = 'opacity .38s cubic-bezier(.47,0,.35,1)';
+          document.body.style.opacity = 0.12;
+        }
+      });
+    });
+  });
+  // Fade-in on load
+  window.onload = function() {
+    document.body.style.opacity = 0.01;
+    setTimeout(() => {
+      document.body.style.transition = 'opacity .62s cubic-bezier(.39,.4,.37,1.1)';
+      document.body.style.opacity = 1;
+    }, 20);
+  };
+  </script>
+
+</body>
+</html>

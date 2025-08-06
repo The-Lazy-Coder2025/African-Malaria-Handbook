@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ rec.title }} – AMH{% endblock %}
+{% block content %}
+<h1>{{ rec.title }}</h1>
+<span class="badge {{ badge_class(rec.risk_rating) }}">Risk {{ rec.risk_rating }}</span>
+
+<div class="verbatim-content">
+  {% for para in rec.content.split('\n\n') %}
+    <p>{{ para|safe }}</p>
+  {% endfor %}
+</div>
+
+
+{% if table %}
+  <h2>Clinical Implications Summary</h2>
+  <div class="clinical-table-wrap">
+    <table>
+      <thead>
+        <tr>
+        {% for col in table.table[0] %}
+          <th>{{ col }}</th>
+        {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in table.table[1:] %}
+        <tr>
+          {% for cell in row %}
+            <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endif %}
+
+<a href="{{ url_for('search', q=rec.title) }}">← Back to search results</a>
+{% endblock %}
